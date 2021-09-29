@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChangeEventData } from './like/like.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'authors-project';
+  info = {
+    body: 'text here',
+    isLiked: true,
+    numberOfLikes: 400
+  };
+  handleChange(eventArgs: ChangeEventData){
+    console.log(eventArgs)
+  }
 }

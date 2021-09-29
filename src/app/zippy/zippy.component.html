@@ -1,0 +1,9 @@
+<div class="custom_box custom_box_title" [class.custom_box_active]="isActive" (click)="handleClick()">
+    {{title}}
+    <span class="float-right">
+        <i class="bi" [class.bi-chevron-down]="!isActive" [class.bi-chevron-up]="isActive"></i>
+    </span>
+</div>
+<div class="custom_box custom_box_content" *ngIf="isActive">
+    <ng-content></ng-content>
+</div>
